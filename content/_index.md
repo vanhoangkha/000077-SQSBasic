@@ -4,7 +4,7 @@ date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
-# Build Even-driven architecture with SNS and SQS
+# Build Event-driven architecture with SNS and SQS
 
 #### Overview
 

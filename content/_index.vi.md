@@ -4,7 +4,7 @@ date :  "`r Sys.Date()`"
 weight : 1 
 chapter : false
 ---
-# Xây dựng kiến trúc Even-driven với SNS và SQS
+# Xây dựng kiến trúc Event-driven với SNS và SQS
 
 #### Tổng quan 
 
