@@ -11,7 +11,7 @@
 	"title": "Triển khai hạ tầng",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai hạ tầng Chúng ta sẽ tận dụng AWS CloudFormation cho phép chúng ta triển khai cơ sở hạ tầng. Bài lab này triển khai ở Region Singapore.\n\r  Thực hiện triển khai hạ tầng bằng CloudFormation\n Sử dụng CloudFormation sau để khởi tạo. Chúng ta sẽ vào giao diện như hình. Giữ nguyên stack name Chọn 2 phần của Capabilities Chọn Create stack    Ngoài ra bạn cũng có thể download template ở link dưới.\n\r\rRelated files\r\r\rmaster-v2.yaml\r\r(1 KB)\r\r\r\rChúng ta sẽ mất 10-15 phút để hoàn thành tạo stack.   Vào mục Output của stack vừa tạo.\n Đây là những tài nguyên chúng ta sẽ sử dụng để thực hiện bài lab.    "
+	"content": "Triển khai hạ tầng Chúng ta sẽ tận dụng AWS CloudFormation cho phép chúng ta triển khai cơ sở hạ tầng. Bài lab này triển khai ở Region Singapore.\n\r  Thực hiện triển khai hạ tầng bằng CloudFormation\n Sử dụng CloudFormation sau để khởi tạo. Chúng ta sẽ vào giao diện như hình. Giữ nguyên stack name Chọn 2 phần của Capabilities Chọn Create stack    Ngoài ra bạn cũng có thể download template ở link dưới.\n\r\rRelated files\r\r\rmaster-v2.yaml\r\r(1 ko)\r\r\r\rChúng ta sẽ mất 10-15 phút để hoàn thành tạo stack.   Vào mục Output của stack vừa tạo.\n Đây là những tài nguyên chúng ta sẽ sử dụng để thực hiện bài lab.    "
 },
 {
 	"uri": "/vi/",

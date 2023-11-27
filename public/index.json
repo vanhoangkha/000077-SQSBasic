@@ -11,7 +11,7 @@
 	"title": "Deploy infrastructure",
 	"tags": [],
 	"description": "",
-	"content": "Deploy infrastructure We will leverage AWS CloudFormation which allows us to deploy the infrastructure. This lab is implemented in Region Singapore.\n\r  Implement infrastructure using CloudFormation\n Use CloudFormation to initialize. We will enter the interface as shown. Keep stack name Select 2 sections of Capabilities Select Create stack    You can also download the template from the link below.\n\r\rRelated files\r\r\rmaster-v2.yaml\r\r(1 KB)\r\r\r\rIt will take us 10-15 minutes to finish creating the stack.   Go to the Output section of the stack just created.\n These are the resources we will use to do the lab.    "
+	"content": "Deploy infrastructure We will leverage AWS CloudFormation which allows us to deploy the infrastructure. This lab is implemented in Region Singapore.\n\r  Implement infrastructure using CloudFormation\n Use CloudFormation to initialize. We will enter the interface as shown. Keep stack name Select 2 sections of Capabilities Select Create stack    You can also download the template from the link below.\n\r\rRelated files\r\r\rmaster-v2.yaml\r\r(1 ko)\r\r\r\rIt will take us 10-15 minutes to finish creating the stack.   Go to the Output section of the stack just created.\n These are the resources we will use to do the lab.    "
 },
 {
 	"uri": "/1-introduce/",
