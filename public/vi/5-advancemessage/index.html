@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Advanced message filtering :: Xây dựng kiến trúc Event-driven với SNS và SQS</title>
 
     
-    <link href="/css/nucleus.css?1701089360" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701089360" rel="stylesheet">
-    <link href="/css/hybrid.css?1701089360" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701089360" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701089360" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701089360" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701089360" rel="stylesheet">
-    <link href="/css/theme.css?1701089360" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701089360" rel="stylesheet">
+    <link href="/css/nucleus.css?1733814216" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733814216" rel="stylesheet">
+    <link href="/css/hybrid.css?1733814216" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733814216" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733814216" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733814216" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733814216" rel="stylesheet">
+    <link href="/css/theme.css?1733814216" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733814216" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701089360" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733814216" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701089360"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733814216"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701089360"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701089360"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733814216"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733814216"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701089360"></script>
+<script type="text/javascript" src="/js/search.js?1733814216"></script>
 
     
   </div>
@@ -255,7 +255,7 @@
   
     
     <li data-nav-id="/vi/5-advancemessage/" title="Advanced message filtering" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -389,7 +389,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -489,19 +489,19 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/0001.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0001.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Đối với tên queue nhập <strong><code>Orders-XL</code></strong></li>
 </ol>
-<p><img src="/images/5/0002.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Chọn <strong>Create queue</strong></li>
 </ol>
-<p><img src="/images/5/0003.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0003.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Tạo <strong>Orders-XL</strong></li>
 </ol>
-<p><img src="/images/5/0004.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0004.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Click tab <strong>SNS subscriptions</strong>.</li>
 </ol>
@@ -510,11 +510,11 @@
 <li>Click chọn <strong>Orders</strong> topic.</li>
 <li>Click <strong>Save</strong></li>
 </ul>
-<p><img src="/images/5/0006.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0006.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Xác thực <strong>Orders-XL SQS queue</strong> thành công subscriber <strong>Orders SNS Topic</strong> và chọn <strong>OK</strong>.</li>
 </ol>
-<p><img src="/images/5/0007.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0007.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>Chúng ta sẽ tạo <strong>Orders-XL</strong> subscription filter policy.</p>
@@ -526,11 +526,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/0008.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0008.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Chọn <strong>Orders-XL subscription</strong> và chọn <strong>Edit</strong></li>
 </ol>
-<p><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/0009.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Thực hiện chỉnh sửa <strong>Subscription filter policy</strong></li>
 </ol>
@@ -541,7 +541,7 @@
     }
   ]
 }
-</code></pre><p><img src="/images/5/00010.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+</code></pre><p><img alt="SQS" src="/images/5/00010.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>
 <p>Hoàn thành chỉnh sửa <strong>Subscription filter policy</strong></p>
@@ -550,7 +550,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00011.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00011.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>
 <p>Thực hiện tạo tiếp một <strong>Orders-X-EU</strong>.</p>
@@ -560,19 +560,19 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00012.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00012.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>Nhập <strong><code>Orders-XL-EU</code></strong> đối với queue name.</li>
 </ol>
-<p><img src="/images/5/00013.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00013.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>Chọn <strong>Create queue</strong></li>
 </ol>
-<p><img src="/images/5/00014.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00014.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Chọn <strong>Subscribe Queue to SNS Topic.</strong></li>
 </ol>
-<p><img src="/images/5/00015.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00015.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>
 <p>Từ <strong>Choose a Topic</strong>,</p>
@@ -582,15 +582,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00016.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00016.png?featherlight=false&width=90pc"></p>
 <ol start="16">
 <li>Xác thực <strong>Orders-XL-EU SQS queue</strong> thành công đăng ký <strong>Order SNS Topic</strong></li>
 </ol>
-<p><img src="/images/5/00017.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00017.png?featherlight=false&width=90pc"></p>
 <ol start="17">
 <li>Chọn <strong>Orders-XL-EU SQS queue subscription</strong></li>
 </ol>
-<p><img src="/images/5/00018.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00018.png?featherlight=false&width=90pc"></p>
 <ol start="18">
 <li>Chỉnh sửa <strong>Subscription filter policy</strong></li>
 </ol>
@@ -604,11 +604,11 @@
     }
   ]
 }
-</code></pre><p><img src="/images/5/00019.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+</code></pre><p><img alt="SQS" src="/images/5/00019.png?featherlight=false&width=90pc"></p>
 <ol start="19">
 <li>Hoàn thành chỉnh sửa <strong>Subscription filter policy</strong></li>
 </ol>
-<p><img src="/images/5/00020.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00020.png?featherlight=false&width=90pc"></p>
 <h4 id="message-1-non-matching-numeric-message-attributes">Message 1: Non-matching numeric message attributes</h4>
 <ol>
 <li>
@@ -622,12 +622,12 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00021.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00021.png?featherlight=false&width=90pc"></p>
 <h4 id="message-2-matching-numeric-message-attributes">Message 2: Matching numeric message attributes</h4>
 <ol>
 <li>Thay đổi quantity attribute lên <strong>100</strong>. Sau đó, chọn <strong>PUBLISH EVENT</strong> để đẩy tin nhắn đến <strong>Orders SNS topic</strong></li>
 </ol>
-<p><img src="/images/5/00022.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00022.png?featherlight=false&width=90pc"></p>
 <h4 id="message-3-matching-and-comparison-message-attributes">Message 3: Matching AND comparison message attributes</h4>
 <ol>
 <li>
@@ -641,7 +641,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00023.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00023.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Xác thực các tin nhắn đã được gửi</p>
@@ -658,7 +658,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5/00024.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/5/00024.png?featherlight=false&width=90pc"></p>
 <p>Xin chúc mừng! Bạn đã sử dụng thành công bộ lọc đăng ký để định tuyến các tin nhắn được xuất bản đến đăng ký chủ đề SNS và xác minh rằng nó đã được gửi đến đúng hàng đợi SQS.</p>
 
 
@@ -854,19 +854,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701089360"></script>
-    <script src="/js/jquery.sticky.js?1701089360"></script>
-    <script src="/js/featherlight.min.js?1701089360"></script>
-    <script src="/js/highlight.pack.js?1701089360"></script>
+    <script src="/js/clipboard.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733814216"></script>
+    <script src="/js/jquery.sticky.js?1733814216"></script>
+    <script src="/js/featherlight.min.js?1733814216"></script>
+    <script src="/js/highlight.pack.js?1733814216"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701089360"></script>
-    <script src="/js/learn.js?1701089360"></script>
-    <script src="/js/hugo-learn.js?1701089360"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733814216"></script>
+    <script src="/js/learn.js?1733814216"></script>
+    <script src="/js/hugo-learn.js?1733814216"></script>
 
-    <link href="/mermaid/mermaid.css?1701089360" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701089360"></script>
+    <link href="/mermaid/mermaid.css?1733814216" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733814216"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

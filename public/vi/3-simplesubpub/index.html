@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Simple pub/sub :: Xây dựng kiến trúc Event-driven với SNS và SQS</title>
 
     
-    <link href="/css/nucleus.css?1701089360" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701089360" rel="stylesheet">
-    <link href="/css/hybrid.css?1701089360" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701089360" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701089360" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701089360" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701089360" rel="stylesheet">
-    <link href="/css/theme.css?1701089360" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701089360" rel="stylesheet">
+    <link href="/css/nucleus.css?1733814216" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733814216" rel="stylesheet">
+    <link href="/css/hybrid.css?1733814216" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733814216" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733814216" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733814216" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733814216" rel="stylesheet">
+    <link href="/css/theme.css?1733814216" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733814216" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701089360" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733814216" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701089360"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733814216"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701089360"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701089360"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733814216"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733814216"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701089360"></script>
+<script type="text/javascript" src="/js/search.js?1733814216"></script>
 
     
   </div>
@@ -203,7 +203,7 @@
   
     
     <li data-nav-id="/vi/3-simplesubpub/" title="Simple pub/sub" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -389,7 +389,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -486,7 +486,7 @@
 <p>Trong phần lab này, bạn sẽ bắt đầu bằng cách xây dựng, triển khai một pub/sub đơn giản. Một <strong>Amazon SNS Topic</strong> sẽ được sử dụng để xuất bản các sự kiện mà bạn là người đăng ký hàng đợi Amazon SQS. Điều này sẽ cho phép bạn dễ dàng xác minh việc gửi thư thành công.</p>
 <p>Amazon SNS Topic là một điểm truy cập hợp lý hoạt động như một kênh giao tiếp. Một Topic cho phép bạn nhóm nhiều endpoint (chẳng hạn như AWS Lambda, Amazon SQS, HTTP/S hoặc một địa chỉ email).</p>
 <p>Để phát thông điệp của hệ thống nhà sản xuất thông điệp (ví dụ: một trang web thương mại điện tử) làm việc với nhiều dịch vụ khác yêu cầu thông điệp của nó (ví dụ: hệ thống thanh toán và thực hiện), bạn có thể tạo một topic cho hệ thống nhà sản xuất của mình.</p>
-<p><img src="/images/3/0000.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0000.png?featherlight=false&width=90pc"></p>
 <ol>
 <li>
 <p>Mở <strong>AWS Management Console</strong></p>
@@ -497,7 +497,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0001.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0001.png?featherlight=false&width=90pc"></p>
 
 <div class="notices info" ><p>Nếu bạn chưa tạo hàng đợi Amazon SQS trước đây, bạn sẽ thấy trang chủ <strong>Simple Queue Service</strong>. Chọn <strong>Get Started Now</strong>, nếu không, hãy nhấp vào <strong>Create queue</strong> ở đầu danh sách hàng đợi của bạn</p>
 </div>
@@ -510,15 +510,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0002.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Chọn <strong>Create queue</strong></li>
 </ol>
-<p><img src="/images/3/0003.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0003.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Từ <strong>Queue Actions</strong>, chọn <strong>Subscribe Queue to SNS Topic</strong></li>
 </ol>
-<p><img src="/images/3/0004.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0004.png?featherlight=false&width=90pc"></p>
 
 <div class="notices info" ><p>Để nhận message được xuất bản cho một topic, bạn phải đăng ký một endpoint cho topic đó. Trong trường hợp này, chúng ta sẽ đăng ký hàng đợi SQS mà bạn đã tạo ở bước trước làm endpoint. Khi bạn đăng ký một endpoint cho một topic, endpoint bắt đầu nhận các message được xuất bản cho topic được liên kết.</p>
 </div>
@@ -529,15 +529,15 @@
 <ul>
 <li>Chọn <strong>Save</strong></li>
 </ul>
-<p><img src="/images/3/0005.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0005.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Xác thực <strong>OrdersQueue SQS queue</strong> đăng ký thành công</li>
 </ol>
-<p><img src="/images/3/0006.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0006.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Chọn và xem chi tiết <strong>Access policy</strong></li>
 </ol>
-<p><img src="/images/3/0007.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0007.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Bắt đầu kiểm tra đẩy tin nhắn bằng <strong>Event Generator</strong></p>
@@ -547,7 +547,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0008.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0008.png?featherlight=false&width=90pc"></p>
 
 <div class="notices note" ><p>Bạn sẽ cần phải chọn đúng Region.</p>
 </div>
@@ -561,11 +561,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0009.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0009.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Chọn <strong>Send and receive messages.</strong></li>
 </ol>
-<p><img src="/images/3/00010.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00010.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>
 <p>Trong màn hình chi tiết</p>
@@ -574,23 +574,23 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/00011.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00011.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>Chúng ta sẽ thấy các cột <strong>ID, Sent, Size và Receive Count</strong></li>
 </ol>
-<p><img src="/images/3/00012.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00012.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>Xem chi tiết message.</li>
 </ol>
-<p><img src="/images/3/00013.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00013.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Sau đó chúng ta sẽ xoá message</li>
 </ol>
-<p><img src="/images/3/00014.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00014.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Xóa message thành công.</li>
 </ol>
-<p><img src="/images/3/00015.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00015.png?featherlight=false&width=90pc"></p>
 
 <div class="notices tip" ><p>Phần lab các bước thực hiện khá dài nên cẩn thận tránh sai sót nhé. Bạn có thể tìm hiểu thêm về <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-integrating-microservices/pub-sub.html">Pub/sub pattern</a></p>
 </div>
@@ -789,19 +789,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701089360"></script>
-    <script src="/js/jquery.sticky.js?1701089360"></script>
-    <script src="/js/featherlight.min.js?1701089360"></script>
-    <script src="/js/highlight.pack.js?1701089360"></script>
+    <script src="/js/clipboard.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733814216"></script>
+    <script src="/js/jquery.sticky.js?1733814216"></script>
+    <script src="/js/featherlight.min.js?1733814216"></script>
+    <script src="/js/highlight.pack.js?1733814216"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701089360"></script>
-    <script src="/js/learn.js?1701089360"></script>
-    <script src="/js/hugo-learn.js?1701089360"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733814216"></script>
+    <script src="/js/learn.js?1733814216"></script>
+    <script src="/js/hugo-learn.js?1733814216"></script>
 
-    <link href="/mermaid/mermaid.css?1701089360" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701089360"></script>
+    <link href="/mermaid/mermaid.css?1733814216" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733814216"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

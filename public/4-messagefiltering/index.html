@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Message filtering :: Building an Event-driven Architecture with SNS and SQS</title>
 
     
-    <link href="/css/nucleus.css?1701089360" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701089360" rel="stylesheet">
-    <link href="/css/hybrid.css?1701089360" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701089360" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701089360" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701089360" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701089360" rel="stylesheet">
-    <link href="/css/theme.css?1701089360" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701089360" rel="stylesheet">
+    <link href="/css/nucleus.css?1733814216" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733814216" rel="stylesheet">
+    <link href="/css/hybrid.css?1733814216" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733814216" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733814216" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733814216" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733814216" rel="stylesheet">
+    <link href="/css/theme.css?1733814216" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733814216" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701089360" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733814216" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701089360"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733814216"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701089360"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701089360"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733814216"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733814216"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701089360"></script>
+<script type="text/javascript" src="/js/search.js?1733814216"></script>
 
     
   </div>
@@ -229,7 +229,7 @@
   
     
     <li data-nav-id="/4-messagefiltering/" title="Message filtering" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -389,7 +389,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -483,7 +483,7 @@
 <p>When you publish a message to a topic, Amazon SNS compares the message attributes to the attributes in the filter policy for each of the topic&rsquo;s subscriptions. If any of the attributes match, Amazon SNS sends the message to the subscriber. Otherwise, Amazon SNS skips the subscriber without sending the message.</p>
 <p>You can simplify your use of Amazon SNS by consolidating your message filtering criteria into your topic subscriptions. This allows you to offload the message filtering logic from subscribers and the message routing logic from publishers, eliminating the need to filter messages by creating a separate topic for each condition. You can use a single topic, differentiating your messages using attributes. Each subscriber receives and processes only the messages accepted by its filter policy.</p>
 <p>In this section, you will create a new SQS queue for EU Orders, and create a subscription to the Orders SNS topic with a filter policy to route each message to the EU Orders SQS queue. To indicate EU Orders, you will assign an attribute, location, with a value eu-west to the message.</p>
-<p><img src="/images/4/0000.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0000.png?featherlight=false&width=90pc"></p>
 <ol>
 <li>
 <p>Access to <a href="https://console.aws.amazon.com/sqs/"><strong>SQS</strong></a></p>
@@ -492,7 +492,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/0001.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0001.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>In the <strong>Create queue</strong> interface</p>
@@ -501,15 +501,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Select <strong>Create queue</strong></li>
 </ol>
-<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0003.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Finish creating a queue.</li>
 </ol>
-<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0004.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Click the <strong>SNS subscriptions</strong> tab.</li>
 </ol>
@@ -518,7 +518,7 @@
 <li>Click on <strong>Orders</strong> topic.</li>
 <li>Click <strong>Save</strong></li>
 </ul>
-<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0005.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Access the service administration interface <a href="https://console.aws.amazon.com/sns/"><strong>SNS</strong></a></li>
 </ol>
@@ -526,7 +526,7 @@
 <li>Click <strong>Topics</strong>.</li>
 <li>Click on <strong>Orders</strong> topic</li>
 </ul>
-<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0007.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>In the <strong>Orders</strong> interface find <strong>Orders-EU</strong> SQS queue subscription.</p>
@@ -535,7 +535,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0008.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>In the subscription editing interface, add <strong>Subscription filter policy</strong></li>
 </ol>
@@ -547,11 +547,11 @@
 </code></pre><ul>
 <li>Select <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/4/0009.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/0009.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Complete policy creation.</li>
 </ol>
-<p><img src="/images/4/00010.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00010.png?featherlight=false&width=90pc"></p>
 <h4 id="message-1-no-message-attributes">Message 1: No message attributes</h4>
 <ol>
 <li>
@@ -562,7 +562,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/00011.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00011.png?featherlight=false&width=90pc"></p>
 <h4 id="message-2-non-present-message-attributes">Message 2: Non-present message attributes</h4>
 <ol start="2">
 <li>
@@ -576,7 +576,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/00012.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00012.png?featherlight=false&width=90pc"></p>
 <h4 id="message-3-non-matching-message-attributes">Message 3: Non-matching message attributes</h4>
 <ol start="3">
 <li>
@@ -589,7 +589,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/00013.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00013.png?featherlight=false&width=90pc"></p>
 <h4 id="message-4-matching-message-attributes">Message 4: Matching message attributes</h4>
 <ol start="4">
 <li>
@@ -602,7 +602,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/00014.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00014.png?featherlight=false&width=90pc"></p>
 
 <div class="notices note" ><p>In this step we will generate a message with attributes and values ​​that match the filter policy we have set.</p>
 </div>
@@ -616,11 +616,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/00015.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00015.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Select <strong>Orders-EU</strong> and select <strong>Actions</strong>. Then select <strong>Purge</strong></li>
 </ol>
-<p><img src="/images/4/00016.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/4/00016.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -815,19 +815,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701089360"></script>
-    <script src="/js/jquery.sticky.js?1701089360"></script>
-    <script src="/js/featherlight.min.js?1701089360"></script>
-    <script src="/js/highlight.pack.js?1701089360"></script>
+    <script src="/js/clipboard.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733814216"></script>
+    <script src="/js/jquery.sticky.js?1733814216"></script>
+    <script src="/js/featherlight.min.js?1733814216"></script>
+    <script src="/js/highlight.pack.js?1733814216"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701089360"></script>
-    <script src="/js/learn.js?1701089360"></script>
-    <script src="/js/hugo-learn.js?1701089360"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733814216"></script>
+    <script src="/js/learn.js?1733814216"></script>
+    <script src="/js/hugo-learn.js?1733814216"></script>
 
-    <link href="/mermaid/mermaid.css?1701089360" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701089360"></script>
+    <link href="/mermaid/mermaid.css?1733814216" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733814216"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

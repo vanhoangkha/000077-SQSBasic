@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Simple pub/sub :: Building an Event-driven Architecture with SNS and SQS</title>
 
     
-    <link href="/css/nucleus.css?1701089360" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701089360" rel="stylesheet">
-    <link href="/css/hybrid.css?1701089360" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701089360" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701089360" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701089360" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701089360" rel="stylesheet">
-    <link href="/css/theme.css?1701089360" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701089360" rel="stylesheet">
+    <link href="/css/nucleus.css?1733814216" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733814216" rel="stylesheet">
+    <link href="/css/hybrid.css?1733814216" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733814216" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733814216" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733814216" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733814216" rel="stylesheet">
+    <link href="/css/theme.css?1733814216" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733814216" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701089360" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733814216" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701089360"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733814216"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701089360"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701089360"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733814216"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733814216"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701089360"></script>
+<script type="text/javascript" src="/js/search.js?1733814216"></script>
 
     
   </div>
@@ -203,7 +203,7 @@
   
     
     <li data-nav-id="/3-simplesubpub/" title="Simple pub/sub" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -389,7 +389,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -486,7 +486,7 @@
 <p>In this lab, you will start by building a simple pub/sub implementation. An Amazon SNS topic will be used to publish events you an Amazon SQS queue subscriber. This will allow you to easily verify the successful delivery of your messages.</p>
 <p>An Amazon SNS topic is a logical access point that acts as a communication channel. A topic lets you group multiple endpoints (such as AWS Lambda, Amazon SQS, HTTP/S, or an email address).</p>
 <p>To broadcast the messages of a message-producer system (for example, an e-commerce website) working with multiple other services that require its messages (for example, checkout and fulfilment systems), you can create a topic for your producer system.</p>
-<p><img src="/images/3/0000.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0000.png?featherlight=false&width=90pc"></p>
 <ol>
 <li>
 <p>Open <strong>AWS Management Console</strong></p>
@@ -497,7 +497,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0001.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0001.png?featherlight=false&width=90pc"></p>
 
 <div class="notices info" ><p>If you have not created an Amazon SQS queue before, you will see the <strong>Simple Queue Service</strong> homepage. Select <strong>Get Started Now</strong>, otherwise click <strong>Create queue</strong> at the top of your queue list</p>
 </div>
@@ -510,15 +510,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0002.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Select <strong>Create queue</strong></li>
 </ol>
-<p><img src="/images/3/0003.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0003.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>From <strong>Queue Actions</strong>, select <strong>Subscribe Queue to SNS Topic</strong></li>
 </ol>
-<p><img src="/images/3/0004.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0004.png?featherlight=false&width=90pc"></p>
 
 <div class="notices info" ><p>To receive published notifications for a topic, you must subscribe to an endpoint for that topic. In this case, we will register the SQS queue you created in the previous step as the endpoint. When you subscribe to an endpoint for a topic, the endpoint starts receiving published messages for the associated topic.</p>
 </div>
@@ -529,15 +529,15 @@
 <ul>
 <li>Select <strong>Save</strong></li>
 </ul>
-<p><img src="/images/3/0005.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0005.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Verify <strong>OrdersQueue SQS queue</strong> successfully registered</li>
 </ol>
-<p><img src="/images/3/0006.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0006.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Select and view details <strong>Access policy</strong></li>
 </ol>
-<p><img src="/images/3/0007.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0007.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Start message push test with <strong>Event Generator</strong></p>
@@ -547,7 +547,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0008.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0008.png?featherlight=false&width=90pc"></p>
 
 <div class="notices note" ><p>You will need to choose the correct Region.</p>
 </div>
@@ -561,11 +561,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/0009.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/0009.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Select <strong>Send and receive messages.</strong></li>
 </ol>
-<p><img src="/images/3/00010.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00010.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>
 <p>In the detail screen</p>
@@ -574,23 +574,23 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/3/00011.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00011.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>We will see the columns <strong>ID, Sent, Size, and Receive Count</strong></li>
 </ol>
-<p><img src="/images/3/00012.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00012.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>View message details.</li>
 </ol>
-<p><img src="/images/3/00013.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00013.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Then we will delete the message</li>
 </ol>
-<p><img src="/images/3/00014.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00014.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Delete message successfully.</li>
 </ol>
-<p><img src="/images/3/00015.png?featherlight=false&amp;width=90pc" alt="SQS"></p>
+<p><img alt="SQS" src="/images/3/00015.png?featherlight=false&width=90pc"></p>
 
 <div class="notices tip" ><p>The steps in the lab are quite long, so be careful to avoid mistakes. You can learn more about <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-integrating-microservices/pub-sub.html">Pub/sub pattern</a></p>
 </div>
@@ -789,19 +789,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701089360"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701089360"></script>
-    <script src="/js/jquery.sticky.js?1701089360"></script>
-    <script src="/js/featherlight.min.js?1701089360"></script>
-    <script src="/js/highlight.pack.js?1701089360"></script>
+    <script src="/js/clipboard.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733814216"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733814216"></script>
+    <script src="/js/jquery.sticky.js?1733814216"></script>
+    <script src="/js/featherlight.min.js?1733814216"></script>
+    <script src="/js/highlight.pack.js?1733814216"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701089360"></script>
-    <script src="/js/learn.js?1701089360"></script>
-    <script src="/js/hugo-learn.js?1701089360"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733814216"></script>
+    <script src="/js/learn.js?1733814216"></script>
+    <script src="/js/hugo-learn.js?1733814216"></script>
 
-    <link href="/mermaid/mermaid.css?1701089360" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701089360"></script>
+    <link href="/mermaid/mermaid.css?1733814216" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733814216"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
