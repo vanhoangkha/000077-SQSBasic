@@ -1,6 +1,6 @@
 ---
 title : "Building an Event-driven Architecture with SNS and SQS"
-date : "`r Sys.Date()`"
+date: 2024-01-01
 weight : 1
 chapter : false
 ---
